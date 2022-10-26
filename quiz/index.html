@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -8,13 +8,14 @@
     <title>posseトップ</title>
     <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
     <!-- START HEADER -->
     <header>
         <div class="logoArea">
-            <img class="LogoImg " src="../img/logo.svg" alt="logo画像">
+            <img class="LogoImg " src="../img/logoのコピー.svg" alt="logo画像">
         </div>
         <div class="listArea">
             <ul>
@@ -31,7 +32,7 @@
 
     <!-- START TOP -->
     <section class="top">
-    <img src="./img/bg-hero.jpg" alt="ImgHero">
+    <img src="./img/bg-hero.jpg" alt="ImgHero" id="ImgHero">
     <div class="TopTitle">
     <h2 class="TopTitle1">POSSE課題</h2>
     <h1 class="TopTitle2">ITクイズ</h1>
@@ -43,15 +44,7 @@
 
     <!-- START QUIZ -->
     <section class="Quiz">
-        <div class="Q1">
-            <h2 class="QIcon">Q1</h2>
-            <p class="QTitle">日本のIT人材が2030年には最大どれくらい不足すると言われ<br>ているでしょうか？</p>
-            <img class=QImg1 src="./img/img-quiz01.png" alt="">
-            <p class="AIcon">A</p>
-            answer : ['約２８万人', '約７９万人', '約８３万人']
-            }
-            <p class="GTitle">経済産業省 2019年3月 － IT 人材需給に関する調査</p>
-        </div>
+        <div id="quizContainer"></div>
 
         <div class="Q2">
             <h2 class="QIcon">Q2</h2>
@@ -109,7 +102,7 @@
 
     <!-- START LINE -->
     <section id=”contact” class="wrapper">
-        <div class="background"><img class="bcp" src="../img/bg-line.jpg" alt=""></div>
+        <div class="background"><img class="bcp" src="../img/bg-line.jpeg" alt=""></div>
         <div class="background-color"></div>
         <div class="contact-title-area">
             <div class="line-icon-area">
@@ -134,7 +127,7 @@
         <div class="Footer">
             <footer>
                 <div class="logoArea2">
-                    <img src="../img/logo.svg" alt="logo画像">
+                    <img src="../img/logoのコピー.svg" alt="logo画像">
                     <li class="possekousikisaito">
                         <a href="">POSSE公式サイト</a>
                     </li>
@@ -167,7 +160,7 @@
 
 
 
-    </footer>
+</footer>
 
 </body>
 
