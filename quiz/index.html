@@ -7,25 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>posseトップ</title>
     <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+    
 </head>
 
 <body>
     <!-- START HEADER -->
-    <header>
+    <header id="js-header" class="l-header p-header">
         <div class="logoArea">
             <img class="LogoImg " src="../img/logoのコピー.svg" alt="logo画像">
         </div>
+
         <div class="listArea">
+            <nav class="p-header__nav">
             <ul>
                 <li><a href="../index.html">POSSEとは</a></li>
                 <li><a href="">クイズ</a></li>
                 <li>
+                    <a href="https://twitter.com/posse_program?s=20">
                     <div class="circle">
-                    <img src="../icon/icon-twitter.svg" alt="TwitterIcon"></div></li>
-                <li><a href=""> <div class="circle"><img src="../icon/icon-instagram.svg" alt="InstagramIcon"></a></div></li>
+                    <img src="../icon/icon-twitter.svg" alt="TwitterIcon"></div></a></li>
+                <li><a href="https://www.instagram.com/posse_programming/"><div class="circle"><img src="../icon/icon-instagram.svg" alt="InstagramIcon"></a></div></li>
             </ul>
+        </nav>
         </div>
     </header>
     <!-- END HEADER -->
@@ -43,60 +52,8 @@
     <!-- END TOP -->
 
     <!-- START QUIZ -->
-    <section class="Quiz">
-        <div id="quizContainer"></div>
 
-        <div class="Q2">
-            <h2 class="QIcon">Q2</h2>
-            <p class="QTitle">既存業界のビジネスと、先進的なテクノロジーを結びつけて<br>生まれた、新しいビジネスのことをなんと言うでしょう？</p>
-            <img class=QImg2 src="./img/img-quiz02.png" alt="">
-            <p class="AIcon">A</p>
-            answer : ['INTECH', 'BIZZCH', 'X-TECH', ]
-            }
-        </div>
-
-        <div class="Q3">
-            <h2 class="QIcon">Q3</h2>
-            <p class="QTitle">IoTとは何の略でしょう？</p>
-            <img class=QImg3 src="./img/img-quiz03.png" alt="">
-                            
-            <p class="AIcon">A</p>
-            answer : ['Internet of Things', 'Integrate into Technology', 'Information  on Tool']
-        </div>
-
-        <div class="Q4">
-            <h2 class="QIcon">Q4</h2>
-            <p class="QTitle">日本が目指すサイバー空間とフィジカル空間を高度に融合さ<br>せたシステムによって開かれる未来社会のことをなんと言う<br>でしょうか？</p>
-            <img class=QImg4 src="./img/img-quiz04.png" alt="">
-            <p class="AIcon">A</p>
-            answer : ['Society 5.0', 'CyPhy', 'SDGs']
-            <p class="GTitle">Society5.0 - 科学技術政策 - 内閣府</p>
-        </div>
-        
-        <div class="Q5">
-            <h2 class="QIcon">Q5</h2>
-            <p class="QTitle">
-                イギリスのコンピューター科学者であるギャビン・ウッド氏<br> が提唱した、ブロックチェーン技術を活用した「次世代分散<br> 型インターネット」のことをなんと言うでしょう？
-            </p>
-            <img class=QImg5 src="./img/img-quiz05.png" alt="">
-            <p class="AIcon">A</p>
-            {
-                answer : ['Web3.0', 'NFT', 'メタバース']
-            }
-        </div>
-            
-        <div class="Q6">
-            <h2 class="QIcon">Q6</h2>
-            <p class="QTitle">先進テクノロジー活用企業と出遅れた企業の収益性の差はど<br>れくらいあると言われているでしょうか？</p> 
-            <img class=QImg6 src="./img/img-quiz06.png" alt="">   
-            <p class="AIcon">A</p>
-            answer : ['約2倍', '約5倍', '約11倍']
-        <p class="GTitle">
-            Accenture Technology Vision 2021 
-        </p>
-        </div>
-
-    </section>
+    <div class="p-quiz-container l-container" id="js-quizContainer"></div>
 
     <!-- END QUIZ -->
 
@@ -127,7 +84,7 @@
         <div class="Footer">
             <footer>
                 <div class="logoArea2">
-                    <img src="../img/logoのコピー.svg" alt="logo画像">
+                    <a href=""><img src="../img/logoのコピー.svg" alt="logo画像"></a>
                     <li class="possekousikisaito">
                         <a href="">POSSE公式サイト</a>
                     </li>
@@ -135,14 +92,17 @@
                 <div class="listArea">
                     <ul class="SnsList">
                         <li class="SnsItem1">
+                            <a href="https://twitter.com/posse_program?s=20">
                             <div class="circle">
                                 <img class=img1 src="../icon/icon-twitter.svg" alt="TwitterIcon">
-                            </div>
+                            </div></a>
                         </li>
                         <li class="SnsItem2">
+                            <a href="https://www.instagram.com/posse_programming/">
                             <div class="circle">
                                 <img class=img2 src="../icon/icon-instagram.svg" alt="InstagramIcon">
                             </div>
+                        </a>
                         </li>
                 </div>
                 <div></div>
@@ -161,7 +121,8 @@
 
 
 </footer>
-
+<script src="./main.js" defer></script>
 </body>
 
 </html>
+

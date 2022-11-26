@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="main.js">
+    <title>WebApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.1.0"></script>
+    <!-- sc js -->
+</head>
+<!-- shift option f 階層揃え-->
+
+<body>
+    <!--start header  -->
+    <header class="header_wrapper">
+        <div class="header_left">
+            <img class="logo" src="./logoのコピー2.svg" alt="posselogo">
+            <p class="th">4th week</p>
+        </div>
+        <button id="modalOpen" class="button">
+            <p class="record"> 記録・投稿</p>
+        </button>
+    </header>
+    <!-- <button class="button">記録・投稿</button> -->
+    <!-- モーダル -->
+    <!-- 
+   -->
+
+
+    <main class="contents_wrapper">
+        <div class="left_area">
+            <div class="top_data">
+                <div class="data_box">
+                    <div class="data_name">Today</div>
+                    <div class="data_number">3</div>
+                    <div class="data_unit">hour</div>
+                </div>
+                <div class="data_box">
+                    <div class="data_name">Month</div>
+                    <div class="data_number">120</div>
+                    <div class="data_unit">hour</div>
+                </div>
+                <div class="data_box">
+                    <div class="data_name">Total</div>
+                    <div class="data_number">1348</div>
+                    <div class="data_unit">hour</div>
+                </div>
+            </div>
+            <div class="under_area">
+                <canvas id="japanese_people_chart" width="500" height="300"></canvas>
+            </div>
+        </div>
+        <div class="right_area">
+            <div class="boxCopy" style="width: 50%">
+                <p class="rt">学習言語</p>
+                <canvas id="graph1" width="500" height="500"></canvas>
+            </div>
+            <div class="boxCopy" style="width: 50%">
+                <p class="rt">学習コンテンツ</p>
+                <canvas id="graph2" width="500" height="500"></canvas>
+            </div>
+
+            <div id="easyModal" class="modal">
+                <div id="modalInner" class="modal-content">
+                    <div class="loadingContainer">
+                        <div id="loading">
+                        </div>
+                    </div>
+                    <div class="modal-header">
+                        <span class="modalClose">×</span>
+                    </div>
+                    <div id="postingCompleted" class="block">
+                        <div class="completedText">
+                            <h3 class="awesome">AWESOME!</h3>
+                            <div class="compCheck">
+
+                            </div>
+                            <label class="MCM_CheckboxInput"><input class="MCM_CheckboxInput-Input"
+                                    type="checkbox"><span class="MCM_CheckboxInput-DummyInput"></span><span
+                                    class="MCM_CheckboxInput-LabelText"></span></label> -->
+                            <h3 class="kirokan">記録・投稿 <br> 完了しました</h3>
+                        </div>
+                    </div>
+                    <div id="modal-body" class="modal-body">
+                        <div class="modalUp"></div>
+                        <div class="modalLeft">
+                            <div class="learnDay">
+                                <p>学習日</p><input class="studyBox" type="date">
+                            </div>
+                            <div class="learnContents">
+                                <p class="lc">学習コンテンツ（複数選択可)</p>
+                                <div class="modalContents">
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">N予備校</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">ドットインストール</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">POSSE課題</span></label>
+                                </div>
+                            </div>
+                            <div class="learnLang">
+                                <p>学習言語</p>
+                                <div class="modalContents">
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">HTML</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">CSS</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">JavaScript</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">PHP</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">Laravel</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">SQL</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">SHELL</span></label>
+                                    <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input"
+                                            type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span
+                                            class="ECM_CheckboxInput-LabelText">情報システム基礎知識（その他）</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modalRight">
+                            <div class="learnHour">
+                                <p>学習時間</p>
+                                <input class="studyBox" type="text" name="example" placeholder="">
+                            </div>
+                            <div class="comentsForTwitter">
+                                <p>Twitter用コメント</p>
+                                <textarea name="" class="twComments" id="twComment" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="TShare">
+                                <input id="twShare" type="checkbox">
+                                <p>Twitterにシェアする</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="button modalButton " id="record" onclick="modalButtonClick()">
+                        <p class="kito">記録・投稿</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+
+        </div>
+
+    </main>
+    <footer class="footer_wrapper">
+        <div class="footer_left">
+            ＜
+        </div>
+        <div class="footer_text">2020年 10月
+        </div>
+        <div class="footer_right">
+            ＞
+        </div>
+
+    </footer>
+    <!-- end header -->
+    <script>
+        Chart.register(ChartDataLabels);
+        const TIME_LOG_DATA_URL =
+            "http://posse-task.anti-pattern.co.jp/1st-work/study_time.json";
+        fetch(TIME_LOG_DATA_URL)
+            .then((response) => response.json())
+            .then((jsonData) => {
+                // JSONデータを扱った処理
+                createTimeLogChart(jsonData);
+            });
+
+
+        function createTimeLogChart(data) {
+            const dayData = data.map(function (e) {
+                return e.day;
+            });
+
+            const timeData = data.map(function (e) {
+                return e.time;
+            });
+            let context = document.querySelector("#japanese_people_chart").getContext('2d')
+            new Chart(context, {
+                type: 'bar',
+                // 棒グラフ
+                data: {
+                    labels: dayData,
+                    datasets: [{
+                        data: timeData,
+                        backgroundColor: [
+                            'rgb(0, 0, 255)'
+                        ]
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false,
+                            },
+                            ticks: {
+                                stepSize: 2,
+                                callback: function (value) {
+                                    if (value % 2 != 0 && value != 0) {
+                                        return value + 1;
+                                    }
+                                },
+                            },
+                        },
+                        y: {
+                            grid: {
+                                display: false,
+                                // chart.jsではtrue,false
+                            },
+                            ticks: {
+                                stepSize: 2,
+                                callback: function (value) {
+                                    return value + "h";
+                                },
+                            },
+                        },
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        datalabels: {
+                            display: false,
+                        },
+                    },
+                }
+            })
+        }
+
+
+
+        const LANGUAGE_DATA_URL =
+            "http://posse-task.anti-pattern.co.jp/1st-work/study_language.json";
+        fetch(LANGUAGE_DATA_URL)
+            .then((response) => response.json())
+            .then((jsonData) => {
+                // JSONデータを扱った処理
+                createLanguagesChart(jsonData);
+            });
+
+        // 学習コンテンツのデータ取得
+        const CONTENTS_DATA_URL =
+            "http://posse-task.anti-pattern.co.jp/1st-work/study_contents.json";
+        fetch(CONTENTS_DATA_URL)
+            .then((response) => response.json())
+            .then((jsonData) => {
+                // JSONデータを扱った処理
+                createContentsChart(jsonData);
+            });
+
+        function createLanguagesChart(data) {
+            const languagesLabels = Object.keys(data[0]);
+            const languagesValue = Object.values(data[0]);
+            console.log(languagesLabels);
+            console.log(languagesValue);
+            // object keys学習言語とか values元のデータex 学習時間の総量 jsonのため
+            const graph1 = document.getElementById('graph1').getContext('2d')
+            new Chart(graph1, {
+                type: 'doughnut',
+                data: {
+                    labels: languagesLabels,
+                    datasets: [{
+                        data: languagesValue,
+                        backgroundColor: [
+                            '#0000FF',
+                            '#4682B4',
+                            '#40e0d0',
+                            '#00ffff',
+                            '#dda0ee',
+                            '#9503f9',
+                            '#0000ff',
+                            '#1919d0',
+                        ],
+                        borderWidth: 0,
+                        // 枠なし
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    // maintainAspectRatio: false,
+                    aspectRatio: 1 / 1,
+                    plugins: {
+                        legend: {
+                            position: "bottom",
+                            align: "start",
+                            labels: {
+                                padding: 10,
+                                usePointStyle: true,
+                                pointStyle: "circle",
+                            },
+                        },
+                        datalabels: {
+                            labels: {
+                                title: {
+                                    color: "#fff",
+                                },
+                            },
+                            formatter: function (value, context) {
+                                return value + "%";
+                            },
+                        },
+                    },
+                }
+            })
+        }
+
+
+        function createContentsChart(data) {
+            const contentsLabels = Object.keys(data[0]);
+            const contentsValue = Object.values(data[0]);
+            const graph2 = document.getElementById('graph2').getContext('2d')
+            new Chart(graph2, {
+                type: 'doughnut',
+                data: {
+                    labels: contentsLabels,
+                    datasets: [{
+                        data: contentsValue,
+                        backgroundColor: [
+                            '#0000FF',
+                            '#4682B4',
+                            '#40e0d0'
+                        ],
+                        borderWidth: 0,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    // maintainAspectRatio: false,
+                    aspectRatio: 1 / 1,
+                    plugins: {
+                        legend: {
+                            position: "bottom",
+                            align: "start",
+                            labels: {
+                                padding: 10,
+                                usePointStyle: true,
+                                pointStyle: "circle",
+                            },
+                        },
+                        datalabels: {
+                            labels: {
+                                title: {
+                                    color: "#fff",
+                                },
+                            },
+                            formatter: function (value, context) {
+                                return value + "%";
+                            },
+                        },
+                    },
+                }
+            })
+        }
+
+    </script>
