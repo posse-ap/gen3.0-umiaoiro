@@ -138,6 +138,7 @@ font-weight: 700;
     color: #0071BC;
     }
 
+
     
 .img_gather{
     width: 472px;
@@ -379,5 +380,8 @@ padding-top: 7px;
 
 }
 
-
-
+@media (max-width: 390px) {
+    header{
+     width: 120%;
+    }
+}

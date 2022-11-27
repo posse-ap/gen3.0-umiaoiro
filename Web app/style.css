@@ -387,6 +387,9 @@ body {
 .logo{
   height: 20px;
 }
+.th{
+  font-size: 10px;
+}
 .modalButton{
   margin-top: 100px;
   margin-right: 1000px;
