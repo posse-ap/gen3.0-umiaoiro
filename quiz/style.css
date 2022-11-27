@@ -1260,6 +1260,58 @@ body {
   }
 }
 
+.p-menu {
+  position: fixed;
+  display: none;
+  top: 110px;
+  width: 100vw;
+  height: calc(100vh - 110px);
+  z-index: 100;
+  background-color: #fff;
+}
+.p-menu--open {
+  display: block;
+}
+.p-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  gap: 40px;
+}
+.p-menu__line-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 80px auto 0;
+  width: 80%;
+  height: 64px;
+  color: #fff;
+  background-color: #5fdf5b;
+  border-radius: 64px;
+}
+.p-menu__official-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  margin-top: 40px;
+}
+.p-menu__official-button img {
+  color: #666;
+}
+
+.p-menu__sns-icons {
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
 @media screen and (max-width: 390px) {
   .l-main {
     /* padding-top: 80px; */
@@ -1294,60 +1346,6 @@ body {
   .p-header__sns {
     margin-left: 32px;
   }
-  .p-menu {
-    /* display: none; */
-    position: fixed;
-    display: none;
-    top: 110px;
-    width: 100vw;
-    height: calc(100vh - 110px);
-    z-index: 100;
-    background-color: #fff;
-  }
-  .p-menu--open {
-    display: block;
-  }
-  .p-menu__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: bold;
-    gap: 40px;
-  }
-  .p-menu__line-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin: 80px auto 0;
-    width: 80%;
-    height: 64px;
-    color: #fff;
-    background-color: #5fdf5b;
-    border-radius: 64px;
-  }
-  .p-menu__official-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #666;
-    margin-top: 40px;
-  }
-  .p-menu__official-button img {
-    color: #666;
-  }
-
-  .p-menu__sns-icons {
-    display: flex;
-    margin: 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-
-  }
-
   .p-footer {
     margin-top: 80px;
   }
