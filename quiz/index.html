@@ -20,7 +20,6 @@
     <!-- START HEADER -->
     <header id="js-header" class="l-header p-header">
         <div class="p-header__logo"><img src="../img/logoのコピー.svg" alt="POSSE"></div>
-        <button class="p-header__button" id="js-headerButton"></button>
         <div class="p-header__inner">
             <nav class="p-header__nav">
                 <ul class="p-header__nav__list">
@@ -34,13 +33,13 @@
             </nav>
             <!-- <div class="p-header__official">
                 <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer"
-                    class="p-header__official__link--line">
-                    <i class="u-icon__line"></i>
-                    <span class="">POSSE公式LINEを追加</span>
-                    <i class="u-icon__link"></i>
-                </a>
-                <a href="" class="p-header__official__link--website">POSSE 公式サイト<i class="u-icon__link"></i></a>
-            </div> -->
+                class="p-header__official__link--line">
+                <i class="u-icon__line"></i>
+                <span class="">POSSE公式LINEを追加</span>
+                <i class="u-icon__link"></i>
+            </a>
+            <a href="" class="p-header__official__link--website">POSSE 公式サイト<i class="u-icon__link"></i></a>
+        </div> -->
             <ul class="p-header__sns p-sns">
                 <li class="p-sns__item">
                     <a href="https://twitter.com/posse_program" target="_blank" rel="noopener noreferrer"
@@ -58,6 +57,29 @@
         </div>
     </header>
     <!-- END HEADER -->
+    
+    <!-- START MENU -->
+    <button class="p-header__button" id="js-headerButton"></button>
+    <div class="p-menu" id="menu">
+        <ul class="p-menu__list">
+            <li>POSSEとは</li>
+            <li>クイズ</li>
+        </ul>
+        <div class="p-menu__line-button">
+            <img src="./img/icon/line-icon.svg" alt="">
+            <span>POSSE公式LINE追加</span>
+            <img src="./img/icon/link-icon.svg" alt="">
+        </div>
+        <div class="p-menu__official-button">
+            <span>POSSE公式サイト</span>
+            <img src="./img/icon/link-icon-grey.svg" alt="">
+        </div>
+        <div class="p-menu__sns-icons">
+            <img src="./img//icon/twitter.svg" alt="">
+            <img src="./img//icon/instagram.svg" alt="">
+        </div>
+    </div>
+    <!-- END MENU -->
 
     <!-- START TOP -->
     <section class="top">
@@ -115,6 +137,7 @@
     </footer>
 
 
+    <script src="../common.js" defer></script>
     <script src="./main.js" defer></script>
 </body>
 
